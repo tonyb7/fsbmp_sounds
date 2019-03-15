@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+ 
+<head>
+ 
+	<title>Puppet Show Sounds</title>
+ 
+	<!-- CSS -->
+	<style type="text/css">
+        body {
+            background-color: #add8e6;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Georgia;
+        }
+		#bigbody{
+            text-align: center;
+            margin-left: auto;
+            margin-right:auto;
+            width: 800px;
+            padding: 20px;
+        }
+ 
+	</style>
+ 
+</head>
+ 
+<body>
+
+    <audio id="loneliness" src="zacchaeus/loneliness.wav"></audio>
+    <audio id="loneliness2" src="zacchaeus/loneliness2.wav"></audio>
+    <audio id="gasping" src="zacchaeus/gasp.wav"></audio>
+	<audio id="eating" src="zacchaeus/eating.wav"></audio>
+	<audio id="crowdnoise" src="zacchaeus/crowdnoise.wav"></audio>
+    <audio id="transition" src="samaritan/transition.wav"></audio>
+    <audio id="transition3" src="samaritan/transition.wav"></audio>
+    <audio id="transition4" src="samaritan/transition.wav"></audio>
+    <audio id="transition2" src="zacchaeus/transition2.wav"></audio>
+    <audio id="transition5" src="zacchaeus/transition2.wav"></audio>
+    <audio id="transition6" src="zacchaeus/transition.wav"></audio>
+    <audio id="transition7" src="zacchaeus/transition2.wav"></audio>
+    <audio id="transition8" src="zacchaeus/transition.wav"></audio>
+    <audio id="transition9" src="zacchaeus/transition2.wav"></audio>
+    <audio id="transition10" src="zacchaeus/transition2.wav"></audio>
+    <audio id="transition11" src="zacchaeus/transition2.wav"></audio>
+	<audio id="bellring" src="samaritan/bellring.mp3"></audio>
+	<audio id="busyhall" src="samaritan/busyhall.wav"></audio>
+	<audio id="busyhall2" src="samaritan/busyhall.wav"></audio>
+	<audio id="busyhall3" src="samaritan/busyhall.wav"></audio>
+	<audio id="fight" src="samaritan/fight.wav"></audio>
+    <audio id="fight2" src="samaritan/fight2.wav"></audio>
+    <audio id="fightquick" src="samaritan/fightquick.mp3"></audio>
+    <audio id="recorder" src="zacchaeus/recorder.wav"></audio>
+	<audio id="violin" src="zacchaeus/violin.wav"></audio>
+	<audio id="violincut1" src="zacchaeus/violincut1.wav"></audio>
+	<audio id="violincut2" src="zacchaeus/violincut2.wav"></audio>
+	<audio id="moo" src="zacchaeus/mooing.wav"></audio>
+    <audio id="doorlong" src="zacchaeus/doorlong.wav"></audio>
+    <audio id="doorshort" src="zacchaeus/doorshort.wav"></audio>
+    <audio id="scurry" src="samaritan/scurry.wav"></audio>
+    <audio id="scurry2" src="samaritan/scurry.wav"></audio>
+    <audio id="scurry3" src="samaritan/scurry.wav"></audio>
+    <audio id="scurry4" src="samaritan/scurry.wav"></audio>
+    <audio id="tadaa" src="samaritan/tadaa.wav"></audio>
+    <audio id="tadaa2" src="samaritan/tadaa.wav"></audio>
+    <audio id="tadaa3" src="samaritan/tadaa.wav"></audio>
+    <audio id="swallow" src="zacchaeus/swallow.mp3"></audio>
+    <audio id="burglar" src="samaritan/burglar.wav"></audio>
+    <audio id="burglar2" src="samaritan/burglar2.wav"></audio>
+    <audio id="eating2" src="zacchaeus/eating2.wav"></audio>
+
+    <script type="text/javascript">
+
+        // var loneliness = document.getElementById('loneliness');
+        // var gasping = document.getElementById('gasping');
+
+        // loneliness.playing = false;
+        // gasping.playing = false;
+
+        function playSound(x) {
+            if (x.currentTime > 5 || x.currentTime == 0) {
+                pauseAudio(x);
+            }
+
+            if (x.playing) {
+                pauseAudio(x);
+            } else {
+                playAudio(x);
+            }
+        }
+
+        function playAudio(x) {    
+            x.play();
+            x.playing = true;
+        }
+
+        function pauseAudio(x) {
+            x.pause();
+            x.currentTime = 0;
+            x.playing = false;
+        }
+
+	</script>
+
+    <div id = "bigbody">
+        <!-- bugs:
+            multiple buttons for same sound
+            after sound stops, playing is still true
+        -->
+
+        <h1>
+            FSBMP 2019 Puppet Show Sounds
+        </h1>
+        These are the buttons to play audio for "Zacchaeus" and "The Good Samaritan."<br/>
+        Click a button to play the sound effect. Click again to stop.
+        <br/><br/>
+        
+        <h2>
+            Zacchaeus
+        </h2>
+        
+		<button onclick="playSound(moo)">MOOOOOOOO</button>
+		<button onclick="playSound(eating2)">Candy Bar Eating</button>
+		<button onclick="playSound(doorshort)">Door Opening</button>
+		<button onclick="playSound(transition11)">Transition Out</button>
+		<button onclick="playSound(transition)">Transition In</button>
+		<button onclick="playSound(busyhall)">Crowd Murmur</button>
+        <button onclick="playSound(gasping)">Audience Gasping</button>
+        <button onclick="playSound(busyhall2)">Crowd Murmur</button>
+        <button onclick="playSound(violincut2)">Loneliness</button>
+		<button onclick="playSound(transition7)">Zach's house, close curtain</button>
+		<button onclick="playSound(transition6)">Zach's house, open curtain</button>
+		<button onclick="playSound(transition3)">Transition Close</button>
+		<button onclick="playSound(transition10)">Transition Open</button>
+		<button onclick="playSound(tadaa3)">Tadaa!</button>
+        
+        <br/><br/>
+        <h2>
+            Good Samaritan
+        </h2>
+        
+	<button onclick="playSound(transition8)">Transition Open</button>
+	<button onclick="playSound(transition5)">Transition Close</button>
+        <button onclick="playSound(bellring)">Bell Ringing</button>
+        <button onclick="playSound(busyhall3)">Busy Hallway</button>
+        <button onclick="playSound(burglar2)">Bob is Coming</button>
+        <button onclick="playSound(fightquick)">Lil' Tim get beat up</button>
+        <button onclick="playSound(scurry)">Patrick scurries in</button>
+        <button onclick="playSound(scurry2)">Patrick out, Tori in</button>
+        <button onclick="playSound(scurry4)">Tori scurries out</button>
+	<button onclick="playSound(transition9)">Transition Close</button>
+        <button onclick="playSound(transition4)">Transition Open</button>
+	<button onclick="playSound(tadaa2)">Tadaa!</button>
+		
+		<br/><br/>
+		<h2>
+            Extra
+        </h2>
+        <button onclick="playSound(fight)">Punching</button>
+        <button onclick="playSound(transition2)">Transition 2</button>
+        <button onclick="playSound(scurry3)">Scurry</button>
+        <button onclick="playSound(tadaa)">Tadaa!</button>
+        <button onclick="playSound(swallow)">Swallowing Water</button>
+        <button onclick="playSound(doorlong)">Door Opening 2</button>
+        <button onclick="playSound(eating)">Cookie Monster</button>
+        <button onclick="playSound(burglar)">Bob is Coming Long</button>
+        <button onclick="playSound(loneliness)">Loneliness Full</button>
+        <button onclick="playSound(loneliness2)">Loneliness Former</button>
+	<button onclick="playSound(recorder)">Loneliness Recorder</button>
+	<button onclick="playSound(violin)">Lonely Violin Full</button>
+        <button onclick="playSound(violincut1)">Lonely Violin Medium</button>
+
+        </br></br></br></br>
+        <footer>
+            TODO: Fix bugs. May have to double click to replay sound. But this may be a good thing. 
+        </footer>
+        
+    </div>
+
+</body>
+ 
+</html>
